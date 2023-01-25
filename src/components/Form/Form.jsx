@@ -124,7 +124,7 @@ function Form() {
 
   const getGeo = async () => {
     try {
-      const response = await await axios.get(`http://ip-api.com/json/`);
+      const response = await await axios.get(`https://ip-api.com/json/`);
       setGeo(response.data);
       setIP(response.data.query);
     } catch (error) {
