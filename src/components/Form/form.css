@@ -1,0 +1,69 @@
+.required {
+  border-width: 1px;
+  border-color: rgb(214, 214, 214);
+  border-style: solid;
+  border-radius: 5px;
+  height: 30px;
+  font-family: sans-serif;
+  padding-left: 10px;
+  font-size: 14px;
+}
+#head {
+  height: 186px;
+  background: url("./header-desktop.png") no-repeat;
+  background-size: cover;
+}
+.error {
+  color: red;
+  font-weight: lighter;
+}
+
+.credit-card-box {
+  margin: 200px auto 30px;
+  position: relative;
+  width: 460px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 160px 45px 340px;
+}
+
+.credit-card-form {
+  perspective: 1000;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#logout {
+  border-radius: 5px;
+  background-color: #000;
+  background-opacity: 0.4;
+  width: 75px;
+  height: 35px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+form {
+  margin: 30px auto 0;
+  max-width: 400px;
+}
+
+.form-actions {
+  margin-top: 15px;
+}
+
+.card-label {
+  text-align: left;
+}
+.card-cvc {
+  right: 17%;
+}
+
+.form-check {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,12 @@
+.btn {
+  background: url("./btn.png");
+}
+.loading {
+  width: 28px;
+  height: 28px;
+  background: url("./33.gif");
+}
+
+input[type="checkbox"] {
+  display: block;
+}
