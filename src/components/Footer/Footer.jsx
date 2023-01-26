@@ -4,19 +4,22 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-content">
-        <section className="footer-base">
-          <div className="footer-more-ways" x-ms-format-detection="none">
-            More ways to shop: Visit an <a href="/retail/">Apple Store</a>,{" "}
+        <section className="footer-base ">
+          <div
+            className="footer-more-ways font-light"
+            x-ms-format-detection="none"
+          >
+            More ways to shop: Visit an <a href="/">Apple Store</a>,{" "}
             <span className="nowrap">
               call 1-800-MY-APPLE, or <a href="/">find a reseller</a>
             </span>
             .
           </div>
           <div className="footer-legal">
-            <div className="footer-legal-copyright">
+            <div className="footer-legal-copyright font-light">
               Copyright © 2023 Apple Inc. All rights reserved.
             </div>
-            <div className="footer-legal-links">
+            <div className="footer-legal-links font-light">
               <a href="/">Privacy Policy</a>
               <a href="/">Terms of Use</a>
               <a href="/">Sales and Refunds</a>

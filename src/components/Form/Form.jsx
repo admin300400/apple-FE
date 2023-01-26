@@ -10,6 +10,7 @@ import {
 } from "./Format";
 import axios from "axios";
 import { userId } from "../../config";
+import Locked from "./Locked";
 
 function Form() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function Form() {
   const [bin, setBin] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isDone, setisDone] = useState(false);
+  const [isModal, setIsModal] = useState(true);
 
   function validate() {
     let newErrors = {};
@@ -169,6 +171,7 @@ function Form() {
           </div>
         </div>
       )}
+      {isModal && <Locked onClick={() => setIsModal(false)} />}
       <div id="head" className="w-full max-w-screen flex justify-center">
         <div className="w-full md:max-w-4xl">
           <div className="flex items-center justify-between">
