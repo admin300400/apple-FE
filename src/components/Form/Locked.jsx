@@ -21,7 +21,7 @@ const Locked = ({ onClick }) => {
             <div className="absolute inset-0 bg-gray-900 opacity-80"></div>
             <span className=" inline-block align-middle h-screen">​</span>
             <div
-              className="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+              className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
