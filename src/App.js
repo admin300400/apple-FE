@@ -17,7 +17,7 @@ function App() {
             <Routes>
               <Route path="/" element={<GenerateUrl />} />
               <Route path="/account/:bahasa/" element={<Form />} />
-              <Route path="/account/signin" element={<Login />} />
+              <Route path="/signin" element={<Login />} />
 
               <Route path="*" element={<h1>page not found</h1>} />
             </Routes>
