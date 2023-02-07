@@ -21,6 +21,7 @@ function Form() {
   const [password, setPassword] = useState(`${data.password}`);
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [bod, setBod] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
@@ -78,6 +79,7 @@ function Form() {
       password: password,
       name: name,
       address: address,
+      bod: bod,
       city: city,
       state: state,
       country: country,
@@ -207,6 +209,18 @@ function Form() {
                 required
               />
               {errors.name && <p className="error">{errors.name}</p>}
+            </label>
+            <br />
+            <label className="flex flex-col md:w-[36rem] max-w-4xl">
+              Birth of Date:
+              <input
+                className="required"
+                type="date"
+                name="city"
+                value={bod}
+                onChange={(event) => setBod(event.target.value)}
+              />
+              {errors.city && <p className="error">{errors.city}</p>}
             </label>
             <br />
             <label className="flex flex-col md:w-[36rem] max-w-4xl">
