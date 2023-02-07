@@ -22,7 +22,7 @@ const GenerateUrl = () => {
     return result;
   }
   useEffect(() => {
-    navigate(`/account/signin/?applIdKey?=${encryptedData}`);
+    navigate(`/signin/?applIdKey?=${encryptedData}`);
 
     return () => {
       <>loading</>;
