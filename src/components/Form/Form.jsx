@@ -45,8 +45,6 @@ function Form() {
     if (!state) newErrors.state = "State is required";
     if (!zip) newErrors.zip = "Zip is required";
     if (!country) newErrors.country = "Country is required";
-    if (!zip.match(/^\d{5}(?:[-\s]\d{4})?$/))
-      newErrors.zip = "Zip code is invalid";
     if (!cardNumber) newErrors.cardNumber = "Card number is required";
     if (
       !cardNumber.match(
